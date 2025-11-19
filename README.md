@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Redux Counter Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and professional counter app built with **React + Redux Toolkit + TypeScript + Vite**.  
+This project demonstrates clean global state management using modern Redux patterns, suitable for junior-level portfolio presentation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Purpose
 
-## React Compiler
+This project was created to showcase practical understanding of Redux Toolkit in a real React + TypeScript environment.  
+It focuses only on core concepts: slice creation, store setup, dispatching actions, and reading state with selectors.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** — UI framework
+- **Redux Toolkit** — modern state management
+- **TypeScript** — type safety and clarity
+- **Vite** — fast development setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Global state managed via Redux Toolkit
+- Typed slice and store with TypeScript
+- Simple increment/decrement logic
+- Clean folder structure and separation of concerns
+- No styling or extra libraries — focused on logic only
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src/ ├── app/              # Redux store setup │   └── store.ts ├── features/ │   └── counter/      # Counter slice and component │       ├── counterSlice.ts │       └── Counter.tsx ├── App.tsx           # Main app component ├── main.tsx          # Entry point with Provider
+
+
+---
+
+🧪 How It Works
+- counterSlice.ts defines the state (value) and two actions: increment and decrement
+- store.ts registers the slice in the Redux store
+- Counter.tsx reads the state with useSelector and dispatches actions with useDispatch
+- main.tsx wraps the app with <Provider> to give access to the store
+
+🧑‍💻 Author
+Made by Soroush Iliyat
+Junior React Developer | Focused on clean architecture and practical Redux usage
+
+📄 License
+This project is open-source and free to use for educational or portfolio purposes.

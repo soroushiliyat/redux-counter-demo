@@ -9,9 +9,9 @@ function Counter() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h2>شمارنده: {count}</h2>
-      <button onClick={() => dispatch(increment())}>افزایش</button>
-      <button onClick={() => dispatch(decrement())}>کاهش</button>
+      <h2>Counter: {count}</h2>
+      <button onClick={() => dispatch(increment())}>increment</button>
+      <button onClick={() => dispatch(decrement())}>decrement</button>
     </div>
   );
 }

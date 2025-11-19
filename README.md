@@ -5,6 +5,9 @@ This project demonstrates clean global state management using modern Redux patte
 
 ---
 
+##Live Demo:
+https://redux-counter-demo-six.vercel.app/
+
 ## 🎯 Purpose
 
 This project was created to showcase practical understanding of Redux Toolkit in a real React + TypeScript environment.  

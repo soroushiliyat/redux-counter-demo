@@ -1,6 +1,6 @@
 // src/features/counter/Counter.tsx
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../../app/store';
+import type { RootState, AppDispatch } from '../../app/store';
 import { increment, decrement } from './counterSlice';
 
 function Counter() {
